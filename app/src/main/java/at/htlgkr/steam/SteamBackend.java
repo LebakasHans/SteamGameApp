@@ -31,7 +31,7 @@ public class SteamBackend {
                     try {
                         return new Game(
                                 strings[0]
-                                ,new SimpleDateFormat("dd.MM.yyyy").parse(strings[1])
+                                ,new SimpleDateFormat(Game.DATE_FORMAT).parse(strings[1])
                                 ,Double.valueOf(strings[2]));
                     } catch (ParseException e) {
                         e.printStackTrace();

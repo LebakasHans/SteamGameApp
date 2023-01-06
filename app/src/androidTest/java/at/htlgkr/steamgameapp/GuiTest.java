@@ -60,7 +60,6 @@ import static org.hamcrest.core.StringStartsWith.startsWith;
 @RunWith(AndroidJUnit4.class)
 @LargeTest
 public class GuiTest {
-    /* Kommentieren Sie diesen Code ein wenn die Oberfläche fertig ist
     @Rule
     public ActivityTestRule<MainActivity> myActivityRule = new ActivityTestRule<>(MainActivity.class);
 
@@ -89,85 +88,85 @@ public class GuiTest {
     }
 
 //    Spinner tests für die Bonusaufgabe einkommentieren!
-//    @Test(timeout = 10000)
-//    public void spinnerTest_dataInSpinner_correctSize() {
-//        Spinner spinner = myActivityRule.getActivity().findViewById(R.id.chooseReport);
-//        assertEquals(5, spinner.getAdapter().getCount());
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_dataInSpinner_correctData() {
-//        Spinner spinner = myActivityRule.getActivity().findViewById(R.id.chooseReport);
-//        ReportTypeSpinnerItem first = (ReportTypeSpinnerItem) spinner.getAdapter().getItem(0);
-//        assertEquals("Select one", first.getDisplayText());
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_sumGamePrices_dialogDisplayed() {
-//        checkDialogDisplayed(SteamGameAppConstants.SUM_GAME_PRICES_SPINNER_TEXT);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_sumGamePrices_showsAnyAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.SUM_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_SUM);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_sumGamePrices_showsCorrectAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.SUM_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_SUM + "8926");
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_averageGamePrices_dialogDisplayed() {
-//        checkDialogDisplayed(SteamGameAppConstants.AVERAGE_GAME_PRICES_SPINNER_TEXT);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_averageGamePrices_showsAnyAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.AVERAGE_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_AVERAGE);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_averageGamePrices_showsCorrectAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.AVERAGE_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_AVERAGE + "17.8");
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_uniqueGamesCount_dialogDisplayed() {
-//        checkDialogDisplayed(SteamGameAppConstants.UNIQUE_GAMES_SPINNER_TEXT);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_uniqueGamesCount_showsAnyAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.UNIQUE_GAMES_SPINNER_TEXT, SteamGameAppConstants.UNIQUE_GAMES_COUNT);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_uniqueGamesCount_showsCorrectAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.UNIQUE_GAMES_SPINNER_TEXT, SteamGameAppConstants.UNIQUE_GAMES_COUNT + "499");
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_mostExpensiveGames_dialogDisplayed() {
-//        checkDialogDisplayed(SteamGameAppConstants.MOST_EXPENSIVE_GAMES_SPINNER_TEXT);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_mostExpensiveGames_showsAnyAnswer() {
-//        checkIfDialogContainsText(SteamGameAppConstants.MOST_EXPENSIVE_GAMES_SPINNER_TEXT, SteamGameAppConstants.MOST_EXPENSIVE_GAMES);
-//    }
-//
-//    @Test(timeout = 10000)
-//    public void spinnerTest_spinnerFunctionality_mostExpensiveGames_showsCorrectAnswer() {
-//        onView(withId(R.id.chooseReport)).perform(click());
-//        onData(hasToString(startsWith(SteamGameAppConstants.MOST_EXPENSIVE_GAMES_SPINNER_TEXT))).perform(click());
-//
-//        List<Game> top5Expensive = DataHelper.getTop5Games();
-//
-//        onView(withText(containsString(top5Expensive.get(0).toString()))).inRoot(isDialog()).check(matches(isDisplayed()));
-//        onView(withText(containsString(top5Expensive.get(1).toString()))).inRoot(isDialog()).check(matches(isDisplayed()));
-//        onView(withText(containsString(top5Expensive.get(2).toString()))).inRoot(isDialog()).check(matches(isDisplayed()));
-//    }
+    @Test(timeout = 10000)
+    public void spinnerTest_dataInSpinner_correctSize() {
+        Spinner spinner = myActivityRule.getActivity().findViewById(R.id.chooseReport);
+        assertEquals(5, spinner.getAdapter().getCount());
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_dataInSpinner_correctData() {
+        Spinner spinner = myActivityRule.getActivity().findViewById(R.id.chooseReport);
+        ReportTypeSpinnerItem first = (ReportTypeSpinnerItem) spinner.getAdapter().getItem(0);
+        assertEquals("Select one", first.getDisplayText());
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_sumGamePrices_dialogDisplayed() {
+        checkDialogDisplayed(SteamGameAppConstants.SUM_GAME_PRICES_SPINNER_TEXT);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_sumGamePrices_showsAnyAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.SUM_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_SUM);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_sumGamePrices_showsCorrectAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.SUM_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_SUM + "8926");
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_averageGamePrices_dialogDisplayed() {
+        checkDialogDisplayed(SteamGameAppConstants.AVERAGE_GAME_PRICES_SPINNER_TEXT);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_averageGamePrices_showsAnyAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.AVERAGE_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_AVERAGE);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_averageGamePrices_showsCorrectAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.AVERAGE_GAME_PRICES_SPINNER_TEXT, SteamGameAppConstants.ALL_PRICES_AVERAGE + "17.8");
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_uniqueGamesCount_dialogDisplayed() {
+        checkDialogDisplayed(SteamGameAppConstants.UNIQUE_GAMES_SPINNER_TEXT);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_uniqueGamesCount_showsAnyAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.UNIQUE_GAMES_SPINNER_TEXT, SteamGameAppConstants.UNIQUE_GAMES_COUNT);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_uniqueGamesCount_showsCorrectAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.UNIQUE_GAMES_SPINNER_TEXT, SteamGameAppConstants.UNIQUE_GAMES_COUNT + "499");
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_mostExpensiveGames_dialogDisplayed() {
+        checkDialogDisplayed(SteamGameAppConstants.MOST_EXPENSIVE_GAMES_SPINNER_TEXT);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_mostExpensiveGames_showsAnyAnswer() {
+        checkIfDialogContainsText(SteamGameAppConstants.MOST_EXPENSIVE_GAMES_SPINNER_TEXT, SteamGameAppConstants.MOST_EXPENSIVE_GAMES);
+    }
+
+    @Test(timeout = 10000)
+    public void spinnerTest_spinnerFunctionality_mostExpensiveGames_showsCorrectAnswer() {
+        onView(withId(R.id.chooseReport)).perform(click());
+        onData(hasToString(startsWith(SteamGameAppConstants.MOST_EXPENSIVE_GAMES_SPINNER_TEXT))).perform(click());
+
+        List<Game> top5Expensive = DataHelper.getTop5Games();
+
+        onView(withText(containsString(top5Expensive.get(0).toString()))).inRoot(isDialog()).check(matches(isDisplayed()));
+        onView(withText(containsString(top5Expensive.get(1).toString()))).inRoot(isDialog()).check(matches(isDisplayed()));
+        onView(withText(containsString(top5Expensive.get(2).toString()))).inRoot(isDialog()).check(matches(isDisplayed()));
+    }
 
     @Test(timeout = 10000)
     public void searchTest_dialogOpens() {
@@ -443,5 +442,5 @@ public class GuiTest {
         onView(withId(R.id.chooseReport)).perform(click());
         onData(hasToString(startsWith(dialogHeader))).perform(click());
         onView(withText(containsString(text))).inRoot(isDialog()).check(matches(isDisplayed()));
-    }*/
+    }
 }
